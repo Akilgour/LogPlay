@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Diagnostics;
+using System.Runtime.CompilerServices;
 using System.Web.Mvc;
 
 namespace LogPlay.Controllers
@@ -11,26 +9,25 @@ namespace LogPlay.Controllers
         // GET: CallerMemberName
         public ActionResult Index()
         {
-            System.Diagnostics.Trace.WriteLine("Entering CallerMemberNameController.Index ");
+            Trace.WriteLine("Entering CallerMemberNameController.Index ");
             LevelOne();
             return View();
         }
 
-        private void LevelOne([System.Runtime.CompilerServices.CallerMemberName] string memberName = "")
+        private void LevelOne([CallerMemberName] string memberName = "")
         {
-            System.Diagnostics.Trace.WriteLine("Entering CallerMemberNameController.LevelOne ");
-            System.Diagnostics.Trace.WriteLine($"memberName{memberName}");
+            Trace.WriteLine("Entering CallerMemberNameController.LevelOne ");
+            Trace.WriteLine($"memberName{memberName}");
             LevelTwo("foo");
-            System.Diagnostics.Trace.WriteLine("Exiting CallerMemberNameController.LevelOne ");
-
+            Trace.WriteLine("Exiting CallerMemberNameController.LevelOne ");
         }
 
-        private void LevelTwo(string value, [System.Runtime.CompilerServices.CallerMemberName] string memberName = "")
+        private void LevelTwo(string value, [CallerMemberName] string memberName = "")
         {
-            System.Diagnostics.Trace.WriteLine("Entering CallerMemberNameController.LevelTwo ");
-            System.Diagnostics.Trace.WriteLine($"value {value}");
-            System.Diagnostics.Trace.WriteLine($"memberName {memberName}");
-            System.Diagnostics.Trace.WriteLine("Exiting CallerMemberNameController.LevelTwo ");
+            Trace.WriteLine("Entering CallerMemberNameController.LevelTwo ");
+            Trace.WriteLine($"value {value}");
+            Trace.WriteLine($"memberName {memberName}");
+            Trace.WriteLine("Exiting CallerMemberNameController.LevelTwo ");
         }
     }
 }
