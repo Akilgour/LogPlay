@@ -222,7 +222,9 @@
     </Compile>
     <Compile Include="Helpers\CallerMemberNameHelper.cs" />
     <Compile Include="Helpers\Interface\ICallerMemberNameHelper.cs" />
+    <Compile Include="Logging\Interface\IXeretecLogging.cs" />
     <Compile Include="Logging\LogFourNet.cs" />
+    <Compile Include="Logging\XeretecLogging.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
