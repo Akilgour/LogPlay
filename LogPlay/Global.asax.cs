@@ -1,4 +1,5 @@
-﻿using LogPlay.Logging;
+﻿using LogPlay.Autofac;
+using LogPlay.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,7 @@ namespace LogPlay
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             LogFourNet.Configure();
+            AutofacConfiguration.Configure();
         }
     }
 }

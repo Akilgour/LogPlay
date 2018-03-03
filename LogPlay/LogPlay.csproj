@@ -216,6 +216,7 @@
     <Compile Include="Controllers\CallerMemberNameController.cs" />
     <Compile Include="Controllers\HardCodedLogFourNetController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InjectedLoggingController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -299,6 +300,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Service References\Application Insights\ConnectedService.json" />
     <Content Include="Views\CallerMemberName\Index.cshtml" />
+    <Content Include="Views\InjectedLogging\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

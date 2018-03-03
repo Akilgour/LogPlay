@@ -1,5 +1,7 @@
 ﻿using Autofac;
 using Autofac.Integration.Mvc;
+using LogPlay.Logging;
+using LogPlay.Logging.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +18,8 @@ namespace LogPlay.Autofac
 
             // Register MVC controllers.
             builder.RegisterControllers(typeof(MvcApplication).Assembly);
+
+            builder.RegisterType<XeretecLogging>().As<IXeretecLogging>();
 
             // Set the dependency resolver to be Autofac.
             var container = builder.Build();
