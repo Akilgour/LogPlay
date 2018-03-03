@@ -8,10 +8,6 @@ namespace LogPlay.Controllers
         // GET: HardCoded
         public ActionResult Index()
         {
-            var config = new NLog.Config.LoggingConfiguration();
-            var logfile = new NLog.Targets.FileTarget() { FileName = "file.txt", Name = "logfile" };
-            config.LoggingRules.Add(new NLog.Config.LoggingRule("*", LogLevel.Error, logfile));
-            LogManager.Configuration = config;
             ILogger logger = LogManager.GetCurrentClassLogger();
 
             logger.Fatal("Highest level: important stuff down");
