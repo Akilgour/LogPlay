@@ -7,3 +7,9 @@
 2018-03-03 00:32:06.9127|WARN|LogPlay.Controllers.HardCodedLogFourNetController|Incorrect behavior but the application can continue
 2018-03-03 00:32:07.3649|INFO|LogPlay.Controllers.HardCodedLogFourNetController|Normal behavior like mail sent, user updated profile etc.
 2018-03-03 00:32:07.8366|DEBUG|LogPlay.Controllers.HardCodedLogFourNetController|Executed queries, user authenticated, session expired
+2018-03-03 23:30:47.6098|FATAL|LogPlay.Logging.XeretecLogging|Highest level: important stuff down
+2018-03-03 23:30:47.6377|ERROR|LogPlay.Logging.XeretecLogging|For example application crashes / exceptions.
+2018-03-03 23:31:44.2662|FATAL|LogPlay.Logging.XeretecLogging|Highest level: important stuff down
+2018-03-03 23:31:44.3204|ERROR|LogPlay.Logging.XeretecLogging|For example application crashes / exceptions.
+2018-03-03 23:43:59.2317|FATAL|LogPlay.Logging.XeretecLogging|Highest level: important stuff down
+2018-03-03 23:43:59.2615|ERROR|LogPlay.Logging.XeretecLogging|For example application crashes / exceptions.
