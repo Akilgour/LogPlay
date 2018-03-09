@@ -228,6 +228,7 @@
     </Compile>
     <Compile Include="Helpers\CallerMemberNameHelper.cs" />
     <Compile Include="Helpers\Interface\ICallerMemberNameHelper.cs" />
+    <Compile Include="Helpers\StringWriterHelper.cs" />
     <Compile Include="Logging\Interface\IXeretecLogging.cs" />
     <Compile Include="Logging\LogFourNet.cs" />
     <Compile Include="Logging\XeretecLogging.cs" />
