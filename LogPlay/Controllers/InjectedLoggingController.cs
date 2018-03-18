@@ -29,11 +29,18 @@ namespace LogPlay.Controllers
 
             return View();
         }
-        
+
         public ActionResult StaticLogHelperAction(string orderId)
         {
             StaticLogHelper.Resolve(_logging, orderId);
             return RedirectToAction("Index");
-        }        
+        }
+
+        public ActionResult InstanceLogHelperAction(string orderId)
+        {
+            var instanceLogHelper = new InstanceLogHelper(_logging);
+            instanceLogHelper.Resolve(orderId);
+            return RedirectToAction("Index");
+        }
     }
 }

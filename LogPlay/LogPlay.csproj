@@ -227,6 +227,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\CallerMemberNameHelper.cs" />
+    <Compile Include="Helpers\InstanceLogHelper.cs" />
     <Compile Include="Helpers\Interface\ICallerMemberNameHelper.cs" />
     <Compile Include="Helpers\StaticLogHelper.cs" />
     <Compile Include="Helpers\StringWriterHelper.cs" />
