@@ -6,4 +6,12 @@
 <h2>Index</h2>
 
 
-@Html.ActionLink("Static Log Helper ", "StaticLogHelperAction", new { orderId = "abc 123" }, new { @class = "btn btn-primary btn-large" })
+<div class="panel panel-default">
+    <div class="panel-heading">Static Log Helper</div>
+    <div class="panel-body">
+        <div>
+            This calls a static helper, that does all the logging
+        </div>
+        @Html.ActionLink("Static Log Helper ", "StaticLogHelperAction", new { orderId = "abc 123" }, new { @class = "btn btn-primary btn-large" })
+    </div>
+</div>
