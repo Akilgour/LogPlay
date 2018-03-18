@@ -1,5 +1,7 @@
 ﻿using LogPlay.Helpers;
 using LogPlay.Logging.Interface;
+using LogPlay.Service;
+using LogPlay.Service.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +13,13 @@ namespace LogPlay.Controllers
     public class InjectedLoggingController : Controller
     {
         private readonly IXeretecLogging _logging;
+        private readonly IPersonService _personService;
 
-        public InjectedLoggingController(IXeretecLogging logging)
+
+        public InjectedLoggingController(IXeretecLogging logging )
         {
             _logging = logging;
+            _personService = new PersonService(_logging);
         }
 
         // GET: InjectedLogging
@@ -40,6 +45,12 @@ namespace LogPlay.Controllers
         {
             var instanceLogHelper = new InstanceLogHelper(_logging);
             instanceLogHelper.Resolve(orderId);
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult ExitingLogHelperAction( )
+        {
+            var person = _personService.GetPersonById(1);
             return RedirectToAction("Index");
         }
     }

@@ -241,6 +241,8 @@
     <Compile Include="Models\SalesOrder.cs" />
     <Compile Include="Models\SalesOrderItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\Interface\IPersonService.cs" />
+    <Compile Include="Service\PersonService.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>

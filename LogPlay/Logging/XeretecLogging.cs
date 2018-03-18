@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Runtime.CompilerServices;
+using LogPlay.Helpers;
 
 namespace LogPlay.Logging
 {
@@ -21,9 +22,15 @@ namespace LogPlay.Logging
         public void Entering([CallerMemberName] string memberName = "")
         {
             System.Diagnostics.Trace.WriteLine($"Entering method {memberName}");
-            _logger.Debug($"Entering method {memberName}");
+            _logger.Trace($"Entering method {memberName}");
         }
 
+        public void Exiting(object result, [CallerMemberName] string memberName = "")
+        {
+            var resultAsXML = StringWriterHelper.Resolve(result);
+            System.Diagnostics.Trace.WriteLine($"Exiting method {memberName} Result {resultAsXML}");
+            _logger.Trace($"Exiting method {memberName} Result {resultAsXML}");
+        }
         public void Debug(string loggingMessage, [CallerMemberName] string memberName = "")
         {
             System.Diagnostics.Trace.WriteLine($"Debug Message from {memberName}");
