@@ -18,6 +18,12 @@ namespace LogPlay.Logging
             _logger = LogManager.GetCurrentClassLogger();
         }
 
+        public void Entering([CallerMemberName] string memberName = "")
+        {
+            System.Diagnostics.Trace.WriteLine($"Entering method {memberName}");
+            _logger.Debug($"Entering method {memberName}");
+        }
+
         public void Debug(string loggingMessage, [CallerMemberName] string memberName = "")
         {
             System.Diagnostics.Trace.WriteLine($"Debug Message from {memberName}");

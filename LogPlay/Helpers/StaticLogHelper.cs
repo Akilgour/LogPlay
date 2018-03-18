@@ -10,6 +10,9 @@ namespace LogPlay.Helpers
     {
         public static string Resolve(IXeretecLogging logging, string orderId)
         {
+
+            logging.Entering();
+
             logging.Fatal("Highest level: important stuff down");
             logging.Error("For example application crashes / exceptions.");
             logging.Warn("Incorrect behavior but the application can continue");

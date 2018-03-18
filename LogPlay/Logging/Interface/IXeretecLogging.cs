@@ -9,6 +9,7 @@ namespace LogPlay.Logging.Interface
 {
     public interface IXeretecLogging
     {
+        void Entering([CallerMemberName] string memberName = "");
         void Fatal(string loggingMessage, [CallerMemberName] string memberName = "");
         void Error(string loggingMessage, [CallerMemberName] string memberName = "");
         void Warn(string loggingMessage, [CallerMemberName] string memberName = "");
