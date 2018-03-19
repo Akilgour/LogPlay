@@ -1,4 +1,5 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System;
+using System.Runtime.CompilerServices;
 
 namespace LogPlay.Logging.Interface
 {
@@ -12,12 +13,14 @@ namespace LogPlay.Logging.Interface
 
         void Error(string loggingMessage, [CallerMemberName] string memberName = "");
 
+        void Error(string loggingMessage, Exception exception,  [CallerMemberName] string memberName = "");
+
         void Warn(string loggingMessage, [CallerMemberName] string memberName = "");
 
         void Info(string loggingMessage, [CallerMemberName] string memberName = "");
 
         void Debug(string loggingMessage, [CallerMemberName] string memberName = "");
-
+   
         void Trace(string loggingMessage, [CallerMemberName] string memberName = "");
     }
 }

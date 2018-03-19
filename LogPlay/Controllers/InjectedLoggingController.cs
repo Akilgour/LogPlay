@@ -41,5 +41,11 @@ namespace LogPlay.Controllers
             var person = _personService.GetPersonById(1);
             return RedirectToAction("Index");
         }
+
+        public ActionResult HandledExceptionLoggingAction()
+        {
+            ExceptionHelper.HandledException(_logging, 1, "Rocky Raccoon");
+            return RedirectToAction("Index");
+        }
     }
 }

@@ -43,6 +43,13 @@ namespace LogPlay.Logging
             _logger.Error(loggingMessage);
         }
 
+        public void Error(string loggingMessage, Exception exception, [CallerMemberName] string memberName = "")
+        {
+            var msg = $"Error Message from {memberName} Exception {exception} ";
+            System.Diagnostics.Trace.WriteLine(msg);
+            _logger.Error(exception, msg);
+        }
+
         public void Fatal(string loggingMessage, [CallerMemberName] string memberName = "")
         {
             System.Diagnostics.Trace.WriteLine($"Fatal Message from {memberName}");
@@ -66,5 +73,6 @@ namespace LogPlay.Logging
             System.Diagnostics.Trace.WriteLine($"Warn Message from {memberName}");
             _logger.Warn(loggingMessage);
         }
+
     }
 }
