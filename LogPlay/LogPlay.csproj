@@ -236,6 +236,7 @@
     <Compile Include="Helpers\ExceptionHelper.cs" />
     <Compile Include="Helpers\InstanceLogHelper.cs" />
     <Compile Include="Helpers\Interface\ICallerMemberNameHelper.cs" />
+    <Compile Include="Helpers\SendEmailHelper.cs" />
     <Compile Include="Helpers\StaticLogHelper.cs" />
     <Compile Include="Helpers\StringWriterHelper.cs" />
     <Compile Include="Logging\Interface\IXeretecLogging.cs" />
