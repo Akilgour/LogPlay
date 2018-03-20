@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Send Email</div>
+    <div class="panel-body">
+        <div>
+            Test sending a email
+        </div>
+        @Html.ActionLink("Send Email", "SendEmail", null, new { @class = "btn btn-primary btn-large" })
+    </div>
+</div>
