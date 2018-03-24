@@ -21,5 +21,12 @@ namespace LogPlay
             LogFourNet.Configure();
             AutofacConfiguration.Configure();
         }
+
+        protected void Application_Error()
+        {
+            var ex = Server.GetLastError();
+            var logging = new XeretecLogging();
+            logging.Error("Unhandled Exception", ex);
+        }
     }
 }

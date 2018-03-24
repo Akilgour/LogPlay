@@ -44,3 +44,12 @@
     </div>
 </div>
 
+<div class="panel panel-default">
+    <div class="panel-heading">Uncatched</div>
+    <div class="panel-body">
+        <div>
+            Throws a uncatched error, that is cought by Application_Error
+        </div>
+        @Html.ActionLink("Go", "Index", "UncatchedError", null, new { @class = "btn btn-primary btn-large" })
+    </div>
+</div>

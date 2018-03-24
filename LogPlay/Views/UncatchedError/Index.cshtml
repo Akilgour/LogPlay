@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p class="bg-danger">Every button will throw a yellow scren of death!  They all go to Application_Error in Global.asax </p>
+
+<div class="panel panel-default">
+    <div class="panel-heading">New Exception</div>
+    <div class="panel-body">
+        <div>
+           Will throw a new exception
+        </div>
+        @Html.ActionLink("Go", "ThrowNewException", null, new { @class = "btn btn-primary btn-large" })
+    </div>
+</div>

@@ -229,6 +229,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\SendGridController.cs" />
     <Compile Include="Controllers\ServiceStackController.cs" />
+    <Compile Include="Controllers\UncatchedErrorController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -324,6 +325,7 @@
     <Content Include="Views\InjectedLogging\Index.cshtml" />
     <Content Include="Views\ServiceStack\Index.cshtml" />
     <Content Include="Views\SendGrid\Index.cshtml" />
+    <Content Include="Views\UncatchedError\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
