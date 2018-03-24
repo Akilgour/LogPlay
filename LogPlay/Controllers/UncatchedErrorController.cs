@@ -23,5 +23,10 @@ namespace LogPlay.Controllers
         {
             throw new Exception("There is a custom message here!");
         }
+
+        public void ThrowNotImplementedException()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
