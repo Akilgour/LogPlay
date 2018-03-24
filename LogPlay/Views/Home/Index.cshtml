@@ -2,4 +2,45 @@
     ViewBag.Title = "Home Page";
 }
 
-@Html.ActionLink("Caller Member Name", "Index", "CallerMemberName", null, new { @class = "btn btn-primary btn-large" })
+<div class="panel panel-default">
+    <div class="panel-heading">CallerMemberName</div>
+    <div class="panel-body">
+        <div>
+            Demo of the correct use of CallerMemberName and puts the results in the output window
+        </div>
+        @Html.ActionLink("Go", "Index", "CallerMemberName", null, new { @class = "btn btn-primary btn-large" })
+    </div>
+</div>
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">Hard Coded Log 4 Net</div>
+    <div class="panel-body">
+        <div>
+            Tests the send grind
+        </div>
+        @Html.ActionLink("Go", "Index", "HardCodedLogFourNet", null, new { @class = "btn btn-primary btn-large" })
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Injected Logging</div>
+    <div class="panel-body">
+        <div>
+            Call the controller that that has the logging injected
+        </div>
+        @Html.ActionLink("Go", "Index", "InjectedLogging", null, new { @class = "btn btn-primary btn-large" })
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Send Grid</div>
+    <div class="panel-body">
+        <div>
+            Tests the send grind
+        </div>
+        @Html.ActionLink("Go", "Index", "SendGrid", null, new { @class = "btn btn-primary btn-large" })
+    </div>
+</div>
+
